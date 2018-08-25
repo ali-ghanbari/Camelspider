@@ -1,0 +1,13 @@
+##domains
+N 10000
+F 10000
+##relations
+pointsto (s:N,f:F,d:N) inputtuples
+reachablefromstatics (n:N) inputtuples
+trivialescape (n:N) inputtuples
+escaped (n:N) outputtuples
+##rules
+escaped(n) :- trivialescape (n).
+escaped(n) :- reachablefromstatics (n).
+escaped(n) :- escaped(s), pointsto(s,f,n).
+

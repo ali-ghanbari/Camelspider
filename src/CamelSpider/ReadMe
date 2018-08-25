@@ -1,0 +1,28 @@
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+                                    A SOUND AND SCALABLE METHOD FOR STATIC DATA RACE DETECTION IN JAVA PROGRAMS
+			
+							ALI GHANBARI AND MEHRAN S. FALLAH
+=========================================================================================================================================================
+
+This directory contains source code of CamelSpider---the tool described in the paper. The set of benchmark programs are also in this directory.
+
+First, you need to set JVM arguments "-Xmx2048m -Xss256m", in order to allocate 2 GiB heap space and 256 MiB stack space for the tool. You may change the numbers as you wish.
+
+You may also need to add the the JAR files in the folder "/Camelspider 2/external/" into your CLASSPATH.
+
+Source files are located at "/Camelspider 2/src/camelspider", where "Main.java" contains the main class.
+
+In order to apply Camelspider on a Java program you must pass the following arguments to the tool:
+	"--w"				to activate whole jimple mode of Soot,
+	"--f J"				to set output file format as JIMPLE intermediate representation
+	"--d [path, e.g. /home/ali/]"	to specify output path to place ".jimple" files
+	"--cp [path, e.g. /home/ali/]"	to specify class path for the input program
+	"--p cg.spark enabled:true"	to enable SPARK---a context-insensitive points-to analysis
+	"--p cg.cha enabled:false"	to disable off-the-self CHA analysis of Soot
+	"--src-prec java"		to set preferred input file extension as .java
+	"main class of the program"	the name of the main class of the program under analysis goes here, e.g. weblech.ui.TextSpider
+Note: if you need to specify additional JAR files, you may pass their names by using "--cp" option. Please note that you may separate different paths by using a colon.
+
+In case of questions: ali.ghanbari@aut.ac.ir
+
+Thank you.
