@@ -2,7 +2,7 @@
 
 This repository presents the results of my MSc thesis at Amirkabir University of Technology.
 
-The file `main.pdf` contains the main body of the article that we had submitted to International Journal of Parallel Computing at 2016.
+The file `main.pdf` contains the main body of the report.
 
 The file `appendix.pdf` contains all the proofs and auxiliary definitions.
 
